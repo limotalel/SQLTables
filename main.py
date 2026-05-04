@@ -6,7 +6,7 @@ conn = sqlite3.connect('data.sqlite')
 
 # CodeGrade step1
 df_boston = pd.read_sql("""
-    SELECT e.firstName, e.lastName, e.jobTitle
+    SELECT e.firstName, e.lastName
     FROM employees e
     JOIN offices o ON e.officeCode = o.officeCode
     WHERE o.city = 'Boston'
